@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R Clean Limpezas - Serviços Profissionais Premium</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Modern sticky header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo-container">
+        <h1>R CLEAN</h1>
+        <span class="logo-subtitle">Limpezas Premium</span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#resultados" class="nav-link">Resultados</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section - More dramatic and impactful -->
+  <section id="inicio" class="hero">
+    <div class="hero-particles"></div>
+    <img src="img/logo2.png" alt="logo R Clean" class="hero-logo2" />
+    <div class="hero-content">
+      <h2 class="hero-title">Seu Espaço, Transformado</h2>
+      <p class="hero-subtitle">Limpeza e higienização profissional que faz a diferença</p>
+      <a href="#servicos" class="cta-button">Descobrir Serviços</a>
+    </div>
+  </section>
+
+  <!-- Services section - Refined layout -->
+  <section id="servicos" class="servicos">
+    <div class="servicos-header">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <p class="section-subtitle">Soluções completas para sua higiene</p>
+    </div>
+    
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img src="img/imper.jpeg" alt="Limpeza profissional de estofados" class="card-image" />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Limpeza de Estofados</h3>
+          <p>Higienização profissional de sofás, poltronas e móveis com tecnologia avançada.</p>
+          <span class="card-tag">Premium</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img src="img/limper.jpeg" alt="Serviço de impermeabilização" class="card-image" />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Impermeabilização</h3>
+          <p>Proteção total contra umidade e infiltrações com produtos de qualidade superior.</p>
+          <span class="card-tag">Proteção</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img src="img/onafter.jpeg" alt="Antes e depois de higienização" class="card-image" />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Higienização Completa</h3>
+          <p>Transformação total dos seus móveis com remoção de ácaros e bactérias.</p>
+          <span class="card-tag">Sanitização</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img src="img/clean.jpeg" alt="Profissional R Clean em ação" class="card-image" />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Limpeza Comercial</h3>
+          <p>Serviços especializados para empresas com garantia de qualidade e pontualidade.</p>
+          <span class="card-tag">Comercial</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img src="img/asper.jpeg" alt="Profissional R Clean em ação" class="card-image" />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Limpeza Comercial</h3>
+          <p>Serviços especializados para empresas com garantia de qualidade e pontualidade.</p>
+          <span class="card-tag">Comercial</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image-wrapper">
+          <img src="img/imper.jpeg" alt="Higienização profissional de sofá" class="card-image" />
+          <div class="card-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>Limpeza Residencial</h3>
+          <p>Ambiente limpo e saudável para você e sua família com produtos seguros.</p>
+          <span class="card-tag">Residencial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultados" class="resultados">
+  <div class="resultados-header">
+    <h2 class="section-title">Antes & Depois</h2>
+    <p class="section-subtitle">Veja a qualidade do nosso trabalho</p>
+  </div>
+
+  <div class="carousel-container">
+
+    <!-- Botão seta esquerda -->
+    <button class="arrow left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+    <!-- Faixa do carrossel -->
+    <div class="carousel" id="carousel">
+      
+      <div class="comparison-item">
+        <img src="img/onafter.jpeg" alt="Antes" />
+        <div class="comparison-label">Antes</div>
+      </div>
+
+      <div class="comparison-item">
+        <img src="img/sofas.png" alt="Depois" />
+        <div class="comparison-label after-label">Depois</div>
+      </div>
+
+      <!-- Adicione mais blocos se quiser -->
+      <div class="comparison-item">
+        <img src="img/prote.png" alt="Antes" />
+        <div class="comparison-label">Antes</div>
+      </div>
+
+      <div class="comparison-item">
+        <img src="img/manxx.png" alt="Depois" />
+        <div class="comparison-label after-label">Depois</div>
+      </div>
+
+    </div>
+
+    <!-- Botão seta direita -->
+    <button class="arrow right" onclick="scrollCarousel(1)">&#10095;</button>
+
+  </div>
+</section>
+
+  <!-- Benefits section -->
+  <section class="beneficios">
+    <h2 class="section-title">Por Que Escolher a R Clean?</h2>
+    <div class="beneficios-grid">
+      <div class="beneficio-card">
+        <div class="beneficio-icon">✓</div>
+        <h4>Profissionais Qualificados</h4>
+        <p>Equipe treinada e experiente em todos os tipos de limpeza</p>
+      </div>
+      <div class="beneficio-card">
+        <div class="beneficio-icon">✓</div>
+        <h4>Produtos Premium</h4>
+        <p>Apenas os melhores produtos de qualidade superior</p>
+      </div>
+      <div class="beneficio-card">
+        <div class="beneficio-icon">✓</div>
+        <h4>Pontualidade Garantida</h4>
+        <p>Chegamos no horário agendado, sempre</p>
+      </div>
+      <div class="beneficio-card">
+        <div class="beneficio-icon">✓</div>
+        <h4>Garantia de Qualidade</h4>
+        <p>Satisfação total ou reformamos o serviço</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats section -->
+  <section class="stats-section">
+    <div class="stats-wrapper">
+      <div class="stat-item">
+        <h3 class="stat-number">500+</h3>
+        <p>Clientes Satisfeitos</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="stat-number">10+</h3>
+        <p>Anos de Experiência</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="stat-number">99%</h3>
+        <p>Taxa de Satisfação</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact section with CTA -->
+  <section id="contato" class="contato">
+    <h2 class="section-title">Pronto para Transformar seu Espaço?</h2>
+    <p class="section-description">Solicite um orçamento sem compromisso e descubra como podemos ajudar.</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/5515996978877" target="_blank" class="btn btn-primary">Chat no WhatsApp</a>
+      <a href="https://www.instagram.com/rafaelribero?igsh=MTl4MHRjazh3M2hoYg==" target="_blank" class="btn btn-secondary">Seguir no Instagram</a>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/5515996978877" target="_blank" class="whatsapp-float" aria-label="Chamar no WhatsApp">
+    <!-- Inline SVG do ícone WhatsApp (sem fundo branco) -->
+     <img src="whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon" />
+  <svg class="whatsapp-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.149s-.771.967-.944 1.167c-.173.198-.346.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.787-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.346.446-.519.149-.173.198-.297.297-.495.099-.198.05-.371-.025-.52-.074-.148-.672-1.611-.922-2.206-.243-.579-.492-.5-.672-.51l-.572-.01c-.199 0-.522.074-.796.37s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487 2.979 1.288 2.98.858 3.517.803.537-.057 1.758-.718 2.006-1.411.248-.693.248-1.287.173-1.411-.074-.123-.272-.198-.57-.347zM20.52 3.48C18.145.997 14.06 0 10.737 0 4.808 0 .129 4.68.13 10.61c0 1.87.498 3.676 1.447 5.296L0 24l8.275-2.42c1.581.872 3.357 1.325 5.146 1.325 5.93 0 10.61-4.68 10.61-10.61 0-3.315-1.292-6.405-3.511-8.815z"/>
+    </svg>
+    <span class="whatsapp-label">Chamar</span>
+  </a>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 R Clean Limpezas - Todos os direitos reservados.</p>
+    <p class="footer-subtitle">Transformando espaços com excelência profissional</p>
+  </footer>
+  <script>
+  function scrollCarousel(direction) {
+    const carousel = document.getElementById('carousel');
+    const itemWidth = 300; // largura de cada bloco + gap
+    carousel.scrollLeft += direction * itemWidth;
+  }
+</script>
+</body>
+</html>
