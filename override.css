@@ -1,0 +1,58 @@
+/* Regras de override para o carrossel principal - load depois de style.css */
+.carrossel {
+  filter: drop-shadow(0 0 8px 10px rgba(0,0,0,0.15));
+  overflow: hidden;
+  width: 100vw;
+  height: 80vh;
+  margin: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.banner {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+  width: 100%;
+  height: 100%;
+}
+
+.banner img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 0 0 100%; /* cada imagem ocupa 100% do slide */
+  display: block;
+}
+
+/* Botões discretos do carrossel principal */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.35);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  font-size: 22px;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.55);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-btn.prev { left: 12px; }
+.carousel-btn.next { right: 12px; }

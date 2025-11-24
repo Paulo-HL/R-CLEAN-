@@ -1,11 +1,11 @@
 /* Modern futuristic color scheme and typography */
 :root {
   --primary: #2d8659;
-  --primary-light: #4cb87d;
+  --primary-light: #4cb86c;
   --primary-dark: #1f5c3d;
   --secondary: #c9f0dd;
   --accent: #9fe8c1;
-  --background: #f9fdf9;
+  --background: #f9fafd;
   --surface: #ffffff;
   --surface-light: #f0faf5;
   --text: #1a3a28;
@@ -32,10 +32,9 @@ body {
   top: 0;
   z-index: 100;
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(45, 134, 89, 0.2);
   box-shadow: 0 8px 32px rgba(45, 134, 89, 0.15);
-  height: 150px;
+  height: 120px;
 }
 
 .header-content {
@@ -50,13 +49,24 @@ body {
 .logo-container h1 {
   position: relative;
   margin: 0;
-  font-size: 1.8rem;
-  color: white;
+  font-size: 1.7rem;
+  color: rgb(228, 228, 228);
   font-weight: 700;
   letter-spacing: -1px;
-  left: 510px;
-  bottom: 20px;
+  left: 230px;
+  bottom: 30px;
  
+}
+.logo-container h2 {
+  position: relative;
+  margin: 0;
+  font-size: 1.55rem;
+  color: white;
+  font-weight: 400;
+  letter-spacing: -1px;
+  left: 460px;
+  bottom: 72px;
+
 }
 
 .logo-subtitle {
@@ -68,7 +78,7 @@ body {
   text-transform: uppercase;
   margin-top: 0.25rem;
   left: 500px;
-  bottom: 25px;
+  bottom: 55px;
 }
 
 .navbar ul {
@@ -80,7 +90,8 @@ body {
   padding: 0;
   font-size: 100px;
   left: -400px;
-  bottom: 5px;
+  bottom: 30px;
+  
 }
 
 .nav-link {
@@ -89,7 +100,8 @@ body {
   font-weight: 500;
   position: relative;
   transition: color 0.1s ease;
-  font-size: 0.95rem;
+  font-size: 20px;
+
 }
 
 .nav-link::after {
@@ -99,7 +111,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: rgba(13, 247, 5, 0.8);
+  background: rgba(5, 9, 247, 0.8);
   transition: width 0.3s ease;
 }
 
@@ -247,6 +259,35 @@ body {
   background-clip: text;
   font-weight: 700;
   letter-spacing: -1px;
+  padding-top: -2rem;
+  margin-top: -99px;
+}
+.section-titlee {
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -1px;
+  padding-top: 3rem;
+  margin-top: -99px;
+  margin: 0.5rem auto 0;
+  max-width: 600px;
+}
+
+.section-titles {
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -1px;
+  padding-top: 3rem;
+  margin-top: -99px;
+  margin: 0.5rem auto 0;
+  max-width: 600px;
 }
 
 .section-subtitle,
@@ -357,13 +398,18 @@ body {
 
 /* New Before & After section */
 .resultados {
-  padding: 5rem 2rem;
+  margin-top: 0;
+  padding-top: 0;
+  padding: -50rem -1rem;
   background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
 }
 
 .resultados-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: -10rem;
+  bottom: 10px;
+  position: relative;
+
 }
 
 .before-after {
@@ -504,6 +550,7 @@ body {
   padding: 5rem 2rem;
   background-color: var(--background);
   text-align: center;
+  padding-top: 10rem;
 }
 
 .contact-buttons {
@@ -621,13 +668,17 @@ body {
 
 /* Área rolável */
 .carousel {
+  position: relative;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   padding: 20px;
   width: 100%;
+  left: 100px;
+
+
 }
 
 .carousel::-webkit-scrollbar {
@@ -638,11 +689,12 @@ body {
 .comparison-item {
   flex: 0 0 280px;
   background: #fff;
-  padding: 15px;
+  padding: 10px;
   border-radius: 12px;
   text-align: center;
   scroll-snap-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
 }
 
 .comparison-item img {
@@ -672,13 +724,7 @@ body {
   opacity: 1;
 }
 
-.arrow.left {
-  left: 10px;
-}
 
-.arrow.right {
-  right: 10px;
-}
 
 /* Labels */
 .comparison-label {
@@ -742,12 +788,16 @@ body {
   line-height: 0; /* remove espaçamento inline inesperado */
 }
 
-.whatsapp-float svg,
 .whatsapp-float img {
   margin: 0 auto; /* centraliza horizontalmente */
   display: block;
-  transform: translateX(4px); /* move 4px para a direita conforme pedido */
-  transition: transform .12s ease;
+  transform: translateX(4px); /* desloca um pouco para a direita para centralizar visualmente */
+}
+
+.whatsapp-float svg {
+  margin: 0 auto;
+  display: block;
+  transform: translateX(4px); /* desloca um pouco para a direita para centralizar visualmente */
 }
 
 .whatsapp-label {
@@ -781,4 +831,129 @@ body {
     width: 36px;
     height: 36px;
   }
+}
+/* Container principal do Carrossel */
+.carousel-container {
+  position: relative;
+  overflow: hidden; /* Isso esconde os slides que não estão ativos */
+  width: 100%;
+  height: 100vh; /* Exemplo: altura total da tela */
+}
+
+/* Contêiner dos slides - Usado para o deslizamento (transform) */
+.carousel-slides {
+  display: flex; /* Coloca os slides lado a lado */
+  width: 100%; /* Isso será modificado pelo JS/CSS */
+  height: 100%;
+  transition: transform 0.5s ease-in-out; /* Adiciona a animação de deslizamento */
+}
+
+/* Estilo individual de cada slide (que agora é a classe 'hero') */
+.carousel-slide {
+  min-width: 100%; /* Cada slide deve ocupar 100% da largura do contêiner */
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* Garante que o conteúdo do slide esteja centralizado ou posicionado corretamente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; /* Exemplo de cor do texto */
+  position: relative; /* Para posicionar elementos internos, como partículas */
+}
+
+/* Se estiver usando <img> dentro do slide (mais amigável para SEO),
+   esta imagem deve cobrir todo o slide mantendo proporção. */
+.carousel-slide .carousel-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0; /* abaixo do overlay e do conteúdo */
+}
+
+/* garante que o overlay fique acima da imagem e o conteúdo acima do overlay */
+.carousel-slide::before {
+  z-index: 1;
+}
+.carousel-slide .hero-content {
+  z-index: 2;
+}
+
+/* Estilização dos controles (setas) */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.carousel-control.prev {
+  left: 20px;
+}
+
+.carousel-control.next {
+  right: 20px;
+}
+
+/* Estilização dos indicadores (pontos) */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: white;
+}
+
+/* Estilos de conteúdo do slide (retirados do seu HTML original) */
+.hero-content {
+  z-index: 5; /* Garante que o conteúdo fique acima das partículas */
+}
+.carrossel {
+  filter: drop-shadow(0 0 8px 10px #000);
+  overflow: hidden;
+  width: 1250px;
+  height: 570px;
+}
+.banner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+  width: 100%;
+}
+.banner img {
+  margin-top: auto;
+  width: 100%;
+  height: 570px; /* manter altura fixa opcional, ou usar auto para natural */
+  object-fit: cover;
+  flex: 0 0 100%; /* cada imagem ocupa 100% do slide */
 }
