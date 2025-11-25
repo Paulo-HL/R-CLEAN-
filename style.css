@@ -792,7 +792,6 @@ body {
   scroll-snap-type: x mandatory;
   padding: 20px;
   width: 100%;
-  left: 100px;
 
 
 }
@@ -803,7 +802,9 @@ body {
 
 /* Cada item */
 .comparison-item {
-  flex: 0 0 280px;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 280px;
   background: #fff;
   padding: 10px;
   border-radius: 12px;
@@ -948,40 +949,44 @@ body {
     height: 36px;
   }
 }
-/* Container principal do Carrossel */
+
 .carousel-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
   position: relative;
-  overflow: hidden; /* Isso esconde os slides que não estão ativos */
+  overflow: hidden; 
   width: 100%;
-  height: 100vh; /* Exemplo: altura total da tela */
+  height: 100vh; 
 }
 
-/* Contêiner dos slides - Usado para o deslizamento (transform) */
+
 .carousel-slides {
-  display: flex; /* Coloca os slides lado a lado */
-  width: 100%; /* Isso será modificado pelo JS/CSS */
+  display: flex;
+  width: 100%; 
   height: 100%;
-  transition: transform 0.5s ease-in-out; /* Adiciona a animação de deslizamento */
+  transition: transform 0.5s ease-in-out; 
 }
 
-/* Estilo individual de cada slide (que agora é a classe 'hero') */
+
 .carousel-slide {
-  min-width: 100%; /* Cada slide deve ocupar 100% da largura do contêiner */
+  min-width: 100%; 
   height: 100%;
   background-size: cover;
   background-position: center;
-  /* Garante que o conteúdo do slide esteja centralizado ou posicionado corretamente */
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white; /* Exemplo de cor do texto */
-  position: relative; /* Para posicionar elementos internos, como partículas */
+  color: white; 
+  position: relative; 
 }
 
-/* Se estiver usando <img> dentro do slide (mais amigável para SEO),
-   esta imagem deve cobrir todo o slide mantendo proporção. */
+
 .carousel-slide .carousel-img {
   position: absolute;
   top: 0;
@@ -993,10 +998,10 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
-  z-index: 0; /* abaixo do overlay e do conteúdo */
+  z-index: 0; 
 }
 
-/* garante que o overlay fique acima da imagem e o conteúdo acima do overlay */
+
 .carousel-slide::before {
   z-index: 1;
 }
