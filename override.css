@@ -2,14 +2,12 @@
 .carrossel {
   filter: drop-shadow(0 0 8px 10px rgba(0,0,0,0.15));
   overflow: hidden;
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
   margin: 0;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
 
 .banner {
@@ -18,6 +16,7 @@
   transform: translateX(0);
   width: 100%;
   height: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .banner img {
@@ -25,7 +24,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex: 0 0 100%; /* cada imagem ocupa 100% do slide */
+  flex: 0 0 100%;
   display: block;
 }
 
@@ -56,3 +55,41 @@
 
 .carousel-btn.prev { left: 12px; }
 .carousel-btn.next { right: 12px; }
+
+/* Media queries para mobile */
+@media (max-width: 768px) {
+  .carrossel {
+    height: auto;
+    max-height: 70vh;
+  }
+
+  .banner {
+    aspect-ratio: auto;
+    height: 250px;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .carousel-btn.prev { left: 8px; }
+  .carousel-btn.next { right: 8px; }
+}
+
+@media (max-width: 480px) {
+  .carrossel {
+    max-height: 50vh;
+  }
+
+  .banner {
+    height: 200px;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}

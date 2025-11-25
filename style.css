@@ -52,11 +52,8 @@ body {
   color: rgb(228, 228, 228);
   font-weight: 700;
   letter-spacing: -1px;
-  left: 270px;
-  bottom: 30px;
   display: flex;
   flex-direction: column;
- 
 }
 .logo-container h2 {
   position: relative;
@@ -65,10 +62,7 @@ body {
   color: white;
   font-weight: 400;
   letter-spacing: -1px;
-  left: 500px;
-  bottom: 68px;
   opacity: 0.9;
-
 }
 .logo-container h1,
 .logo-container h2,
@@ -87,8 +81,6 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-top: 0.25rem;
-  left: 500px;
-  bottom: 55px;
   opacity: 0.9;
 }
 
@@ -100,8 +92,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 100px;
-  left: -400px;
-  bottom: 30px;
 }
 
 .nav-link {
@@ -121,7 +111,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: rgba(5, 9, 247, 0.8);
+  background: rgba(5, 247, 247, 0.8);
   transition: width 0.3s ease;
 }
 
@@ -139,8 +129,6 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  bottom: 70px;
-  height: 10px;
 }
 
 .hero-particles {
@@ -187,9 +175,7 @@ body {
   text-align: center;
   position: static;
   z-index: 1;
-  text-align: center;
   color: var(--text);
-  bottom: 60px;
 }
 
 .hero-title {
@@ -412,17 +398,13 @@ body {
 /* New Before & After section */
 .resultados {
   margin-top: 0;
-  padding-top: 0;
-  padding: -50rem -1rem;
+  padding: 3rem 1rem;
   background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
 }
 
 .resultados-header {
   text-align: center;
-  margin-bottom: -10rem;
-  bottom: 10px;
-  position: relative;
-
+  margin-bottom: 3rem;
 }
 
 .before-after {
@@ -637,19 +619,32 @@ body {
     gap: 0.5rem;
   }
 
+  .logo-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-container h2 {
+    font-size: 0.9rem;
+  }
+
   .navbar ul {
-    gap: 1.2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    font-size: 14px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
   }
 
   .hero {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .before-after {
@@ -658,6 +653,7 @@ body {
 
   .cards-container {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .contact-buttons {
@@ -669,7 +665,112 @@ body {
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .section-titles {
+    font-size: 1.8rem;
+  }
+
+  .section-titlee {
+    font-size: 1.8rem;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .carousel {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .comparison-item {
+    flex: 0 0 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem 0;
+  }
+
+  .logo-container h1 {
+    font-size: 1rem;
+  }
+
+  .logo-container h2 {
+    font-size: 0.8rem;
+  }
+
+  .navbar ul {
+    gap: 0.8rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .section-title,
+  .section-titles,
+  .section-titlee {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .cards-container {
+    gap: 1rem;
+  }
+
+  .card-image-wrapper {
+    height: 200px;
+  }
+
+  .card-content {
+    padding: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .carousel-container {
+    padding: 5px;
+  }
+
+  .carousel {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .comparison-item {
+    flex: 0 0 220px;
+  }
+
+  .stats-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 /* Container geral do carrossel */
@@ -956,19 +1057,21 @@ body {
 .carrossel {
   filter: drop-shadow(0 0 8px 10px #000);
   overflow: hidden;
-  width: 1250px;
-  height: 570px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .banner {
   display: flex;
   transition: transform 0.5s ease-in-out;
   transform: translateX(0);
   width: 100%;
+  height: 100%;
 }
 .banner img {
-  margin-top: auto;
+  margin: 0;
   width: 100%;
-  height: 570px; /* manter altura fixa opcional, ou usar auto para natural */
+  height: 100%;
   object-fit: cover;
-  flex: 0 0 100%; /* cada imagem ocupa 100% do slide */
+  flex: 0 0 100%;
 }
