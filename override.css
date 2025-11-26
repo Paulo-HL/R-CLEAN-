@@ -23,9 +23,11 @@
   margin: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   flex: 0 0 100%;
   display: block;
+  background-color: transparent;
 }
 
 /* Botões discretos do carrossel principal */
@@ -65,7 +67,8 @@
 
   .banner {
     aspect-ratio: auto;
-    height: 250px;
+    /* deixa a altura fluida no mobile para evitar corte */
+    height: auto;
   }
 
   .carousel-btn {
@@ -84,7 +87,8 @@
   }
 
   .banner {
-    height: 200px;
+    /* altura fluida no celular para não cortar imagens */
+    height: auto;
   }
 
   .carousel-btn {
@@ -92,4 +96,49 @@
     height: 32px;
     font-size: 16px;
   }
+}
+
+/* Força o ajuste responsivo das imagens em telas pequenas/extra pequenas */
+@media (max-width: 768px) {
+  .banner img {
+    width: 100%;
+    height: auto; /* permite que a imagem mantenha a proporção e não seja cortada */
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: var(--surface, #fff);
+  }
+}
+
+/* Desktop: garante que a imagem ocupe o espaço horizontal, mantendo a visibilidade completa */
+@media (min-width: 769px) {
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* mostra toda a imagem sem cortar */
+    object-position: center;
+    display: block;
+    background-color: var(--surface, #fff);
+  }
+}
+
+/* Forçar que nenhum elemento do carrossel imponha altura fixa que corte imagens */
+.carousel-container,
+.carrossel,
+.banner {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important; /* evita que o contêiner esconda partes da imagem */
+}
+
+/* Garante que as imagens do banner mantenham proporção completa e não sejam cortadas
+   - max-height controla quanto da viewport a imagem pode ocupar; ajuste se necessário */
+.banner img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 80vh !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  background-color: transparent !important;
 }

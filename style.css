@@ -33,7 +33,7 @@ body {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   border-bottom: 1px solid rgba(45, 134, 89, 0.2);
   box-shadow: 0 8px 32px rgba(45, 134, 89, 0.15);
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
 }
 
 .header-content {
@@ -43,6 +43,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .logo-container h1 {
@@ -246,7 +247,8 @@ body {
 
 .servicos-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  margin-top: -80px;
 }
 
 .section-title {
@@ -283,10 +285,11 @@ body {
   background-clip: text;
   font-weight: 700;
   letter-spacing: -1px;
-  padding-top: 3rem;
-  margin-top: -99px;
+  padding-top: 0;
+  margin-top: 0;
   margin: 0.5rem auto 0;
   max-width: 600px;
+ 
 }
 
 .section-subtitle,
@@ -405,6 +408,7 @@ body {
 .resultados-header {
   text-align: center;
   margin-bottom: 3rem;
+  margin-top: -80px;
 }
 
 .before-after {
@@ -673,7 +677,7 @@ body {
   }
 
   .section-titlee {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .beneficios-grid {
