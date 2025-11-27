@@ -1,6 +1,4 @@
-/* script.js */
 
-// Smooth scrolling for internal anchors
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -11,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// IntersectionObserver for reveal animations
+
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px',
@@ -30,7 +28,7 @@ document.querySelectorAll('.card, .stat-item').forEach((el) => {
   observer.observe(el);
 });
 
-// Highlight nav links on scroll
+
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -51,7 +49,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Inject small style for active nav link (keeps original behavior)
 const style = document.createElement('style');
 style.textContent = `
   .nav-link.active {
@@ -63,13 +60,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// -------------------------
-// Carousel automático
-// -------------------------
-// Estrutura HTML esperada:
-// <div class="carrossel"><div class="banner"> <img/><img/>...</div></div>
 
-// Carousel: loop infinito com clones
 const carrossel = document.querySelector('.carrossel');
 const banner = document.querySelector('.banner');
 

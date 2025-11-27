@@ -801,10 +801,9 @@ body {
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; /* opcional: esconde a barra */
+  display: none; 
 }
 
-/* Cada item */
 .comparison-item {
   flex: 0 0 auto;
   width: 100%;
