@@ -142,3 +142,56 @@
   display: block !important;
   background-color: transparent !important;
 }
+
+/* Fix: evitar que o próximo slide apareça parcialmente
+   Garante que cada slide ocupe 100% do contêiner e que o overflow seja escondido. */
+.carrossel {
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+.banner {
+  display: flex !important;
+  gap: 0 !important;
+  align-items: stretch !important;
+}
+
+.banner > img {
+  flex: 0 0 100% !important; /* cada imagem ocupa 100% da largura do carrossel */
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+/* Modal: centralizar corretamente em telas pequenas */
+.modal {
+  display: none; /* padrão: continua escondido até ativar via JS */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  width: 100% !important;
+  max-width: 520px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+/* Promo bar no celular: garantir centralização */
+@media (max-width: 600px) {
+  .promo-bar {
+    justify-content: center !important;
+    text-align: center !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
