@@ -155,3 +155,43 @@ if (banner && banner.children.length > 0) {
   }
 }
 
+
+
+  const finalDate = new Date("Dec 10, 2025 23:59:59").getTime();
+
+  const timer = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = finalDate - now;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "Promoção encerrada!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  }, 1000);
+
+const modal = document.getElementById("propaganda-modal");
+
+// Função para abrir o modal
+function abrirModal() {
+    modal.style.display = "flex"; // Muda de 'none' para 'flex' para mostrar
+}
+
+// Função para fechar o modal
+function fecharModal() {
+    modal.style.display = "none";
+}
+
+// Mostra o pop-up automaticamente após 3 segundos (3000 milissegundos)
+// Você pode ajustar esse tempo
+setTimeout(abrirModal, 2000);

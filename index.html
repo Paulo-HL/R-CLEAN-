@@ -14,7 +14,16 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Modern sticky header -->
+  <div id="propaganda-modal" class="modal">
+        
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharModal()">&times;</span>
+            <h2>OFERTA EXCLUSIVA!</h2>
+            <p>Aproveite Nossos descontos de final de ano!</p>
+            <a class="call-to-action" onclick="fecharModal()">Quero Aproveitar!</a>
+        </div>
+    </div>
+
   <header class="header">
     <div class="header-content">
       <div class="logo-container">
@@ -30,7 +39,18 @@
         </ul>
       </nav>
     </div>
+    
   </header>
+<div class="promo-bar">
+  <span class="promo-text">🔥 Promoção termina em:</span>
+
+  <div id="countdown" class="promo-count">
+    <span id="days">00</span>d
+    <span id="hours">00</span>h
+    <span id="minutes">00</span>m
+    <span id="seconds">00</span>s
+  </div>
+</div>
  
   <div class="carrossel">
     <button class="carousel-btn prev" aria-label="Anterior">‹</button>
@@ -52,9 +72,10 @@
     
     <div class="cards-container">
       <div class="card">
+         <span class="card-promo">Promoção</span>
         <div class="card-image-wrapper">
           <img src="img/clean.jpeg" alt="Limpeza profissional de estofados" class="card-image" />
-          <div class="card-overlay"></div>
+        
         </div>
         <div class="card-content">
           <h3>Higienização Residencial de Estofados</h3>
@@ -76,6 +97,7 @@
 
       <div class="card">
         <div class="card-image-wrapper">
+           <span class="card-promo">Promoção</span>
           <img src="img/asper.jpeg" alt="Antes e depois de higienização" class="card-image" />
           <div class="card-overlay"></div>
         </div>
@@ -238,6 +260,9 @@
     const itemWidth = 300; // largura de cada bloco + gap
     carousel.scrollLeft += direction * itemWidth;
   }
+
+  
+  
 </script>
 </body>
 </html>
