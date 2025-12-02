@@ -184,7 +184,7 @@ const modal = document.getElementById("propaganda-modal");
 
 // Função para abrir o modal
 function abrirModal() {
-    modal.style.display = "flex"; // Muda de 'none' para 'flex' para mostrar
+    modal.style.display = "flex"; 
 }
 
 // Função para fechar o modal
@@ -192,6 +192,6 @@ function fecharModal() {
     modal.style.display = "none";
 }
 
-// Mostra o pop-up automaticamente após 3 segundos (3000 milissegundos)
-// Você pode ajustar esse tempo
+// Mostra o pop-up automaticamente após   
+
 setTimeout(abrirModal, 2000);
